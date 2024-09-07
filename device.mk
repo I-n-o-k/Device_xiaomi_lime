@@ -13,5 +13,14 @@ include device/xiaomi/sm6115-common/common.mk
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
+    FrameworksCustomLime \
+    FrameworksResLime \
+    SettingsResLime \
+    SystemUIResLime \
+    TelephonyResLime
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/lime/lime-vendor.mk)
